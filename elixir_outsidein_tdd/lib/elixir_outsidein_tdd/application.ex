@@ -7,7 +7,7 @@ defmodule ElixirOutsideinTdd.Application do
 
   def start(_type, _args) do
     children = [
-      {Plug.Cowboy, scheme: :http, plug: GreetingWeb, port: 4000}
+      {Plug.Cowboy, scheme: :http, plug: {GreetingWeb, greeting: Greeting}, port: 4000}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
