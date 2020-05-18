@@ -1,5 +1,5 @@
 defmodule Greeting do
-  def greet() do
-    "Hello my friend!"
-  end
+  def greet(nil), do: "Hello my friend!"
+
+  def greet(name), do: "Hello #{name}!"
 end
